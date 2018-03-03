@@ -13,37 +13,52 @@
 <link href="css/web.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<?
-	//if(eregi('./',$_SERVER['PHP_SELF'])){
-		if(isset($_GET[dia])){
-			if($_GET[dia]=="lunes"){$lun_activo=' class="active"'; $dia_actual="Lunes";}
-			else if($_GET[dia]=="martes"){$mar_activo=' class="active"'; $dia_actual="Martes";}
-			else if($_GET[dia]=="miercoles"){$mie_activo=' class="active"'; $dia_actual="Mi&eacute;rcoles";}
-			else if($_GET[dia]=="jueves"){$jue_activo=' class="active"';  $dia_actual="Jueves";}
-			else if($_GET[dia]=="viernes"){$vie_activo=' class="active"'; $dia_actual="Viernes";}
-			else if($_GET[dia]=="sabado"){$sab_activo=' class="active"'; $dia_actual="S&aacute;bado";}
-			else if($_GET[dia]=="domingo"){$dom_activo=' class="active"'; $dia_actual="Domingo";}
-		}else{
-			if(date("w")=="0"){$dom_activo=' class="active"'; $dia_actual="Domingo";}
-			if(date("w")=="1"){$lun_activo=' class="active"'; $dia_actual="Lunes";}
-			if(date("w")=="2"){$mar_activo=' class="active"'; $dia_actual="Martes";}
-			if(date("w")=="3"){$mie_activo=' class="active"'; $dia_actual="Mi&eacute;rcoles";}
-			if(date("w")=="4"){$jue_activo=' class="active"';  $dia_actual="Jueves";}
-			if(date("w")=="5"){$vie_activo=' class="active"';; $dia_actual="Viernes";}
-			if(date("w")=="6"){$sab_activo=' class="active"'; $dia_actual="S&aacute;bado";}
-			/*if(dia(date("w")-1)=="Lunes"){$lun_activo=' class="active"'; $dia_actual="Lunes";}
-			if(dia(date("w")-1)=="Martes"){$mar_activo=' class="active"'; $dia_actual="Martes";}
-			if(dia(date("w")-1)=="Mi&eacute;rcoles"){$mie_activo=' class="active"'; $dia_actual="Mi&eacute;rcoles";}
-			if(dia(date("w")-1)=="Jueves"){$jue_activo=' class="active"';  $dia_actual="Jueves";}
-			if(dia(date("w")-1)=="Viernes"){$vie_activo=' class="active"';; $dia_actual="Viernes";}
-			if(dia(date("w")-1)=="S&aacute;bado"){$sab_activo=' class="active"'; $dia_actual="S&aacute;bado";}
-			if(dia(date("w")-1)=="Domingo"){$dom_activo=' class="active"'; $dia_actual="Domingo";}
-			if(dia(date("w")-1)==""){$dom_activo=' class="active"'; $dia_actual="Domingo";}*/
-		}
-		
-//	}
-   
-	?>
+<?php
+//if(eregi('./',$_SERVER['PHP_SELF'])){
+$lun_activo = '';
+$mar_activo = '';
+$mie_activo = '';
+$jue_activo = '';
+$vie_activo = '';
+$sab_activo = '';
+$dom_activo = '';
+if (isset($_GET['dia'])) {
+    if ($_GET['dia'] == "lunes") {$lun_activo = ' class="active"';
+        $dia_actual = "Lunes";} else if ($_GET['dia'] == "martes") {$mar_activo = ' class="active"';
+        $dia_actual = "Martes";} else if ($_GET['dia'] == "miercoles") {$mie_activo = ' class="active"';
+        $dia_actual = "Mi&eacute;rcoles";} else if ($_GET['dia'] == "jueves") {$jue_activo = ' class="active"';
+        $dia_actual = "Jueves";} else if ($_GET['dia'] == "viernes") {$vie_activo = ' class="active"';
+        $dia_actual = "Viernes";} else if ($_GET['dia'] == "sabado") {$sab_activo = ' class="active"';
+        $dia_actual = "S&aacute;bado";} else if ($_GET['dia'] == "domingo") {$dom_activo = ' class="active"';
+        $dia_actual = "Domingo";}
+} else {
+    if (date("w") == "0") {$dom_activo = ' class="active"';
+        $dia_actual = "Domingo";}
+    if (date("w") == "1") {$lun_activo = ' class="active"';
+        $dia_actual = "Lunes";}
+    if (date("w") == "2") {$mar_activo = ' class="active"';
+        $dia_actual = "Martes";}
+    if (date("w") == "3") {$mie_activo = ' class="active"';
+        $dia_actual = "Mi&eacute;rcoles";}
+    if (date("w") == "4") {$jue_activo = ' class="active"';
+        $dia_actual = "Jueves";}
+    if (date("w") == "5") {$vie_activo = ' class="active"';
+        $dia_actual = "Viernes";}
+    if (date("w") == "6") {$sab_activo = ' class="active"';
+        $dia_actual = "S&aacute;bado";}
+    /*if(dia(date("w")-1)=="Lunes"){$lun_activo=' class="active"'; $dia_actual="Lunes";}
+if(dia(date("w")-1)=="Martes"){$mar_activo=' class="active"'; $dia_actual="Martes";}
+if(dia(date("w")-1)=="Mi&eacute;rcoles"){$mie_activo=' class="active"'; $dia_actual="Mi&eacute;rcoles";}
+if(dia(date("w")-1)=="Jueves"){$jue_activo=' class="active"';  $dia_actual="Jueves";}
+if(dia(date("w")-1)=="Viernes"){$vie_activo=' class="active"';; $dia_actual="Viernes";}
+if(dia(date("w")-1)=="S&aacute;bado"){$sab_activo=' class="active"'; $dia_actual="S&aacute;bado";}
+if(dia(date("w")-1)=="Domingo"){$dom_activo=' class="active"'; $dia_actual="Domingo";}
+if(dia(date("w")-1)==""){$dom_activo=' class="active"'; $dia_actual="Domingo";}*/
+}
+
+//    }
+
+?>
 <div id="top">
   <div id="text_right"><span>elige el d&iacute;a de tu preferencia</span></div>
   <div id="menu">
@@ -61,8 +76,9 @@
   <div class="limpia"></div>
   <div id="contenedor">
    	  <div id="bloque_izq">
-        
-        	<div id="area_login"><?
+
+        	<div id="area_login">
+			<?
         if(!isset($_SESSION[id_user])){
 		?>
                 <form id="frmlogin" action="comprueba.php">
@@ -76,35 +92,22 @@
                 <div id="lost"><a href="lost">¿Olvidaste tu contraseña?</a></div>
 				<? }else{?><div id="micuenta"><a href="./cuenta.php">Mi cuenta</a></div>
                 <? }?>
-                
+
             </div>
-            
+
             <div id="redes">
             	<img src="images/sitiomovil.png" />
             </div>
         </div>
         <div id="cont_ofe">
-        <?
-		/*if(!isset($_GET[dia])){
-			
-			$dia_actual=date("w")-1;
-		if($dia_actual<0){$dia_actual=0;}
-		$dia_actual=dia($dia_actual);
-		}*/
-		/*if(isset($_GET[dia])){
-			
-			$dia_actual=date("w")-1;
-		if($dia_actual<0){$dia_actual=0;}
-		$dia_actual=dia($dia_actual);
-		}*/
-		//echo $dia_actual."<br>";
-		//echo "select * from ofertas where fecha='".sql_fecha($dia_actual)."' and activo='si' order by id";
-        $sql=mysql_query("select * from ofertas where fecha='".sql_fecha($dia_actual)."' and activo='si' order by id");
-		$n=1;
-		while($row=mysql_fetch_array($sql)){
-			if ( $n % 2 == 0 ) {
-				?>
-                
+        <?php
+
+$sql = mysql_query("select * from ofertas where fecha='" . sql_fecha($dia_actual) . "' and activo='si' order by id");
+$n = 1;
+while ($row = mysql_fetch_array($sql)) {
+    if ($n % 2 == 0) {
+        ?>
+
                 <div class="cont_ofer_der">
             	<div class="flecha_der"></div>
             	<div class="ofer_der">
@@ -122,10 +125,10 @@
                 </div>
             </div>
             <div class="limpia_o"></div>
-                <?
-			}else{
-				?>
-                
+                <?php
+} else {
+        ?>
+
                 <div class="cont_ofer_izq">
             	<div class="flecha_izq"></div>
             	<div class="ofer_izq">
@@ -143,12 +146,12 @@
                 </div>
             </div>
             <div class="limpia_o"></div>
-                <?
-			}
-			$n++;
-		}
-		?>
-        	
+                <?php
+}
+    $n++;
+}
+?>
+
         </div>
     </div>
     <div class="limpia_o"></div>
@@ -161,27 +164,28 @@
 </body>
 </html>
 <? include('php/analytics.php');?>
-<? if($_GET[token]!=""){
-	$sql=mysql_query("select * from usuarios where md5='".$_GET[token]."'");
-	if($row=mysql_fetch_array($sql)){
-		?>
+<?php if ($_GET[token] != "") {
+    $sql = mysql_query("select * from usuarios where md5='" . $_GET[token] . "'");
+    if ($row = mysql_fetch_array($sql)) {
+        ?>
         <script>
-		$(document).ready(function(){	
+		$(document).ready(function(){
 			$("#ventana").ventana();
 			//$('#ventana').css("width","250px");
 			$('#ventana').css("height","200px");
 			$("#ventana").html('<br><center><img src="images/loading.gif"><br><br>Procesando...</center>');
-			$('#ventana').center();	
+			$('#ventana').center();
 			$.post('php/paginas.php?pag=lost3', {md5:'<?=$_GET[token]?>'},
 			  function(data){
 				  $("#ventana").html('<a href="#" onclick="cerrar_ventana(); return false;"><div id="cerrar_ventana"></div></a><div class="limpiar"></div>'+data);
-		 	});		
+		 	});
 		});
 		</script>
-        
-        <?
-	}else{
-		echo "<script>alert('El enlace no es válido o a caducado.');</script>";
-	}mysql_free_result($sql);
+
+        <?php
+} else {
+        echo "<script>alert('El enlace no es válido o a caducado.');</script>";
+    }
+    mysql_free_result($sql);
 }
 ?>
