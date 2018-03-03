@@ -102,9 +102,10 @@ if(dia(date("w")-1)==""){$dom_activo=' class="active"'; $dia_actual="Domingo";}*
         <div id="cont_ofe">
         <?php
 
-$sql = mysql_query("select * from ofertas where fecha='" . sql_fecha($dia_actual) . "' and activo='si' order by id");
+$sql = "select * from ofertas where fecha='" . sql_fecha($dia_actual) . "' and activo='si' order by id";
 $n = 1;
-while ($row = mysql_fetch_array($sql)) {
+
+while ($row = $mysqli -> query($sql) -> fetch_array()) {
     if ($n % 2 == 0) {
         ?>
 
