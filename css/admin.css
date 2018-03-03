@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+#mnu_admin{float:left; width:170px;}
+#mnu_admin a li{ text-decoration:none; background:#FFF; color:#000; margin-top:1px; padding:5px; list-style:none;}
+#mnu_admin a:hover li{color:#F60;}
+#tblusuarios, .tblusuarios{ border-collapse:collapse; border:solid 1px #000000; }
+#tblusuarios td, .tblusuarios td{ padding:5px; border:solid 1px #000000; text-align:center; }
+#tblusuarios td.titulo, .tblusuarios td.titulo{ font-weight:bold; font-size:13px; color:#000; background:#CCC; text-align:center;}
+#tblusuarios td.datos, .tblusuarios td.datos{font-size:13px; color:#333; background:#FFF4E6; border-top:solid 1px #000000;}
+#tblusuarios td.datos a, .tblusuarios td.datos a{color:#F00; text-decoration:none;}
+#tblusuarios td.datos a:hover, .tblusuarios td.datos a:hover{text-decoration:underline;}

@@ -1,0 +1,9 @@
+body {
+    max-width: 208px; 
+}
+#contenedor{
+	 font-family:Arial, Helvetica, sans-serif;
+	 background:#CCCCCC;
+	 font-size:18px; color:#09F;
+	 border:solid 1px;
+}

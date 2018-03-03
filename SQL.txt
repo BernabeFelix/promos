@@ -1,0 +1,64 @@
+--
+-- Estructura de tabla para la tabla `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `admin`
+--
+
+INSERT INTO `admin` (`id`, `usuario`, `pass`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ofertas`
+--
+
+CREATE TABLE IF NOT EXISTS `ofertas` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `img` varchar(100) NOT NULL,
+  `descr` text NOT NULL,
+  `fecha` varchar(20) NOT NULL,
+  `id_u` int(255) NOT NULL,
+  `activo` varchar(2) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  KEY `id` (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL,
+  `activo` varchar(2) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `apellidos` varchar(100) NOT NULL,
+  `empresa` varchar(100) NOT NULL,
+  `direccion` varchar(100) NOT NULL,
+  `colonia` varchar(100) NOT NULL,
+  `municipio` varchar(100) NOT NULL,
+  `cp` varchar(100) NOT NULL,
+  `estado` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `tel` varchar(100) NOT NULL,
+  `servicio` varchar(100) NOT NULL,
+  `md5` varchar(255) NOT NULL,
+  KEY `id` (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+

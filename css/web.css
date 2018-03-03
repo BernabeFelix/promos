@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0px;
+	/*background:#b7b7b7 url(../images/bgtop.jpg) center 133px no-repeat;*/
+	background:url(../images/fondo_1180x1820.jpg) center -100px no-repeat;
+	background-attachment:fixed;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#logo{
+	width:246px; height:118px; background:url(../images/logo.jpg) 0 0 no-repeat; float:left;
+}
+#contenedor{
+	margin-top:15px; /*background:url(../images/logo2.jpg) right top no-repeat;*/ min-height:320px;
+}
+#pie{
+	border-top:solid 7px #f7941e; padding:10px 0; text-align:center; min-width:1090px; color:#262262; font-family:Arial, Helvetica, sans-serif; font-size:12px;
+}
+#pie span{ font-size:11px;}
+#pie a{ color:#262262; text-decoration:none;}
+#pie a:hover{ text-decoration:underline; color:#03F;}
+#menu2{ text-align:center; margin:0 auto 15px; color:#000;}
+#menu2 a, #menu2 a:link, #menu2 a:visited{ margin:0 20px; color:#262262; text-decoration:none; text-transform:uppercase; font-size:15px; font-weight:bold;}
+#menu2 a:hover, #menu2 a#activo{ color:#03F;}
+
+#bloque_izq{float:left; width:250px; height:300px;}
+#bloque_izq div#redes{width:100px; margin:15px auto; height:50px; text-align:center;}
+#bloque_izq div#redes span{ font-size:19px; font-variant:small-caps;}
+#bloque_izq div#redes a, #bloque_izq div#redes a:link, #bloque_izq div#redes a:visited{ margin:0 2px;}
+#cont_ofe{float:left; width:600px; margin-left:5px; min-height:100px; padding-top:8px;}
+#cont_ofe div.cont_ofer_der, #cont_ofe div.cont_ofer_izq{ min-height:70px; margin:0 5px 18px;}
+#cont_ofe div.cont_ofer_der div.ofer_der{ min-height:70px; float:right; width:490px; /*border:solid 1px #006;*/ background:#FFF; height:auto;}
+#cont_ofe div.cont_ofer_der div.flecha_der{ float:left; background:url(../images/fizq.png) 0 0 no-repeat; width:88px; height:79px;}
+
+
+#cont_ofe div.cont_ofer_izq div.ofer_izq{ min-height:70px; float:left; width:490px; /*border:solid 1px #FFF;*/ background:#fff;  height:auto;}
+#cont_ofe div.cont_ofer_izq div.flecha_izq{ float:right; background:url(../images/fder.png) 0 0 no-repeat; width:88px; height:79px;}
+.tbl_ofer_der, .tbl_ofer_izq{ color:#0099FF; font-size:12px; text-align:justify; min-height:70px;}
+.tbl_ofer_der td, .tbl_ofer_izq td{ padding:5px 10px;}
+.tbl_ofer_der td.cld_logo{ border-right:solid 1px #fefefe;}
+.tbl_ofer_izq td.cld_logo{ border-left:solid 1px #fefefe;}
+.limpia{ clear:both;}
+.tbl_ofer_izq span, .tbl_ofer_der span{ color:#333333;}
+
+#top{width:1090px; margin:auto; background:url(../images/top.png) center top no-repeat; height:137px;}
+#text_right{float:right; width:250px; height:35px; margin-top:20px; margin-right:20px;}
+#text_right span { display:none;}
+#sep_top{height:7px; min-width:1090px; margin:15px auto; background:#f7941e;}
+
+#menu{float:left; margin:30px 0 0 380px; width:650px; height:33px;}
+#menu a div span{ display:none;}
+#menu a div#lun{float:left; width:77px; height:33px;}
+#menu a div#mar{float:left; width:86px; height:33px;}
+#menu a div#mie{float:left; width:117px; height:33px;}
+#menu a div#jue{float:left; width:78px; height:33px;}
+#menu a div#vie{float:left; width:88px; height:33px;}
+#menu a div#sab{float:left; width:93px; height:33px;}
+#menu a div#dom{float:left; width:108px; height:33px;}
+
+#menu a:hover div#lun, #menu a.active div#lun, 
+#menu a:hover div#mar, #menu a.active div#mar, 
+#menu a:hover div#mie, #menu a.active div#mie, 
+#menu a:hover div#jue, #menu a.active div#jue, 
+#menu a:hover div#vie, #menu a.active div#vie,
+#menu a:hover div#sab, #menu a.active div#sab,
+#menu a:hover div#dom, #menu a.active div#dom {background:url(../images/spriteh.jpg); }
+
+#menu a:hover div#lun, #menu a.active div#lun{ background-position:4px 3px;}
+#menu a:hover div#mar, #menu a.active div#mar{ background-position:-73px 3px;}
+#menu a:hover div#mie, #menu a.active div#mie{ background-position:-159px 3px;}
+#menu a:hover div#jue, #menu a.active div#jue{ background-position:-276px 3px;}
+#menu a:hover div#vie, #menu a.active div#vie{ background-position:-354px 3px;}
+#menu a:hover div#sab, #menu a.active div#sab{ background-position:-442px 3px;}
+#menu a:hover div#dom, #menu a.active div#dom{ background-position:-535px 3px;}
+
+#mnu{float:right; width:565px; height:93px; background:url(../images/spritemenu.jpg) 0 0 no-repeat; margin:20px 120px 0 0;}
+#mnu a li{ float:left; list-style:none; height:92px;}
+#mnu a li#lunes, #mnu a li#jueves, #mnu a li#viernes, #mnu a li#sabado{ width:60px; margin-right:15px;}
+#mnu a li#martes, #mnu a li#miercoles{ width:85px; margin-right:15px;}
+#mnu a li#domingo{ width:60px;}
+#mnu a:hover li#lunes, #mnu a:hover li#martes, #mnu a:hover li#miercoles, #mnu a:hover li#jueves, #mnu a:hover li#viernes, #mnu a:hover li#sabado, #mnu a:hover li#domingo, #mnu a.active li#viernes, #mnu a.active li#lunes, #mnu a.active li#martes, #mnu a.active li#miercoles, #mnu a.active li#jueves, #mnu a.active li#sabado, #mnu a.active li#domingo {background:url(../images/spritemenu.jpg); }
+#mnu a:hover li#lunes, #mnu a.active li#lunes{ width:60px; background-position:0 -93px;}
+#mnu a:hover li#martes, #mnu a.active li#martes{ width:85px; background-position:-75px -93px;}
+#mnu a:hover li#miercoles, #mnu a.active li#miercoles{ width:85px; background-position:-175px -93px;}
+#mnu a:hover li#jueves, #mnu a.active li#jueves{ width:60px; background-position:-275px -93px;}
+#mnu a:hover li#viernes, #mnu a.active li#viernes{ width:60px; background-position:-350px -93px;}
+#mnu a:hover li#sabado, #mnu a.active li#sabado{ width:60px; background-position:-425px -93px;}
+#mnu a:hover li#domingo, #mnu a.active li#domingo{ width:60px; background-position:-500px -93px;}
+.capa_gris{ background:#b7b7b7; height:25px; width:260px;}
+#fondo {
+	position:fixed;
+	_position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	_height: 100%;
+	background-color:#FFF;
+	/*filter:alpha(opacity=70);
+	-moz-opacity: 0.70;
+	opacity: 0.70;*/
+	z-index:3;
+}
+#ventana{
+	position:fixed;
+	_position:fixed;
+	top: 0;
+	left: 0;
+	width: 530px;
+	height: 241px;
+	_height: 241px;
+	background-color:#FFF;
+	border:solid 3px #666666;
+	z-index:5;
+	color:#a9a9a9;
+}
+#cerrar_ventana{background:url(../images/btn_cerrar.jpg) 0 0 no-repeat; float:right; width:18px; height:20px; cursor:pointer; margin:4px 5px;}
+div#tit_pag{ font-size:24px; color:#ff6904; text-align:center; font-variant:small-caps; background:url(../images/sep_pag.jpg) center bottom no-repeat; padding:20px 0 13px;}
+div#text_pag{ font-size:12px; padding:15px 18px; text-align:justify;}
+div.datos{margin-top:5px; font-size:12px; color:#999999; padding-left:250px;}
+div#dato{margin:15px 0 0 0; font-size:12px; color:#525252; padding:10px 0 5px 303px;}
+div#img_cont{background:url(../images/contacto.jpg); width:445px; height:132px; margin:15px auto 0;}
+.limpia_o{ clear:both; height:1px; padding:5px 0;}
+#area_login{ /*border:solid 1px #FFFFFF;*/ margin:8px auto; width:155px; padding:5px 12px 10px; background:#f7941e; font-size:14px; font-weight:bold; }
+#area_login #lost{font-size:12px; text-align:center;}
+#area_login div.label{margin:10px 0 5px;}
+#area_login #lost a{ color:#FFF; text-decoration:none;}
+#area_login #registro{ font-size:13px; margin:3px; text-align:center;}
+#area_login #registro a{ color:#FFF; text-decoration:none;}
+#area_login #lost a:hover, #area_login #registro a:hover{ color:#000; text-decoration:underline;}
+#frmlogin{ margin:0px 0;}
+#frmlogin div.form, #frmlogina div.form{  background:#FFF;  padding:4px; }
+#frmlogin div.form input[type=text], #frmlogin div input[type=password], #frmlogina div.form input[type=text], #frmlogina div input[type=password]{ background:none; border:none; color:#dedede; font-size:12px; width:145px; color:#333333;}
+#frmlogin div input[type=submit], #frmlogina div input[type=submit]{ width:47px; height:21px; background:url(../images/btnentrar.jpg) 0 0 no-repeat; border:none; cursor:pointer;}
+#frmlogin div.submit, #frmlogina div.submit{ padding:5px 0; text-align:right;}
+#cont_reg{width:800px; margin:auto; font-size:12px; color:#000;}
+#cont_reg h1{ color:#FFF; font-size:18px; padding-left:5px; font-weight:normal;}
+#cont_reg h2{ font-size:12px; margin:10px 0; padding-left:5px; font-weight:normal;}
+
+.tblreg td{ border:solid 1px #f7941e; padding:5px; background:#FFF;}
+.tblreg td input{ border:none; width:244px; font-size:12px; color:#636363; border:solid 1px #FFFFFF;}
+.tblreg td input#largo{ border:none; width:510px; font-size:12px; color:#636363; border:solid 1px #FFFFFF;}
+#btnsubmit{ text-align:center;}
+#btnsubmit input{ background:url(../images/btnreg.jpg) 0 0 no-repeat; border:none; width:121px; height:41px; margin:5px; cursor:pointer;}
+#contenedorc{
+	background:url(../images/logo2.jpg) 0 0 no-repeat; width:850px; margin:20px auto;
+}
+.tblofer td{border:solid 1px #f7941e; padding:5px; background:#FFF;}
+.tblofer td input{ border:none; width:225px; font-size:12px; color:#636363;}
+.tblofer td input[type=file]{border:none;}
+
+#cont_textarea{ float:right; width:240px; margin-right:2px; border:solid 1px #f7941e; background:#FFF;}
+#cont_textarea textarea{ font-size:12px; color:#636363; font-family:Arial, Helvetica, sans-serif;}
+.tblofer td select{ border:none;  color:#636363;}
+#cont_submit{text-align:center;}
+#cont_submit input{width:91px; height:29px; border:none; background:url(../images/btncrear.jpg) 0 0 no-repeat; cursor:pointer;}
+li.ofertas{ list-style:none; float:left; width:158px; height:158px; border:solid 1px #8c8b8b; margin:5px; background:#FFF; text-align:center; padding:5px; color:#4a4a4a; font-size:12px;}
+li.ofertas div{ height:115px;}
+li.ofertas span.expirado{ color:#F00;}
+li.ofertas a{ text-decoration:none; color:#FF6600;}
+#micuenta{font-size:16px; text-align:center;}
+#micuenta a{color:#FFF; text-decoration:none;}
+#micuenta a:hover{color:#000; text-decoration:underline;}
+#div_logout{margin-top:20px; text-align:right;}
+#div_logout a{color:#424141; font-size:12px; text-decoration:none;}
+#div_logout a:hover{ text-decoration:underline; color:#FFFFFF;}
+#tbllost td#text{ border:solid 1px #f7941e; background:#FFFFFF; padding:5px;}
+#tbllost td#text input{ width:210px; border:none; color:#636363; border:solid 1px #FFFFFF;}
+#tbllost td#submit input{width:109px; height:39px; background:url(../images/btnlost.jpg) 0 0 no-repeat; border:none; cursor:pointer;}
+
+.poli{ text-align:justify;}
+.poli li{
+	list-style:none;
+}
+.poli li ul li{
+	list-style:none;
+	padding-bottom:20px;
+}
+
+/*.poli li ul li ul li{ padding-top:20px;}*/
+#cuenta_arriba{font-size:35px; font-variant:small-caps; text-align:center;}
+#cuenta_arriba span{ color:#000000;}
