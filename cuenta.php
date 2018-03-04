@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 require('php/inc.funciones.php');
 include('php/inc.config.php');
@@ -37,7 +37,7 @@ if(!isset($_SESSION[id_user])){
       <div style="font-size:14px; color:#212121;">Podrás agregar ofertas y promociones de manera ilimitada. Estas únicamente se     mostrarán al momento de contratar uno de nuestros paquetes.
 </div>
       	<div style="width:531px; background:#e6e6e6; margin-top:20px; height:210px;" class="redondea">
-        
+
         	<div style="padding:20px;">
             <?
 			$sql=mysql_query("select * from usuarios where id='".$_SESSION[id_user]."'");
@@ -45,15 +45,15 @@ if(!isset($_SESSION[id_user])){
 		if($row[activo]=="si"){$activo="si";}else{$activo="no";}
 		mysql_free_result($sql);
              if($_POST){
-				 
+
 					$desc=limpia_html(trim($_POST[desc]));
-					
+
 					$nombreo=limpia_html(trim($_POST[nombre]));
 					$dia=limpia_html(trim($_POST[dia]));
 					$mes=limpia_html($_POST[mes]);
 					$anio=limpia_html(trim($_POST[anio]));
 					$nombre_archivo = $_FILES['userfile']['name'];
-				
+
 					if(strlen($dia)==1){$dia="0".$dia;}
 					if(strlen($mes)==1){$mes="0".$mes;}
 					$fecha=$dia."-".$mes."-".$anio;
@@ -67,7 +67,7 @@ if(!isset($_SESSION[id_user])){
 						}
 					}
 					if(!$error){
-						
+
 						$path="images/logos/";
 						$sep=explode('image/',$_FILES["userfile"]["type"]);
 						$tipo=$sep[1];
@@ -84,10 +84,10 @@ if(!isset($_SESSION[id_user])){
 					$tam=getimagesize($_FILES['userfile']['tmp_name']);
 					$ancho = $tam[0];
 					$alto =  $tam[1];
-					$anchomax = 119;		
-					
+					$anchomax = 119;
+
 					if($tipo=="gif"){
-						$imagenoriginal = imagecreatefromgif($_FILES['userfile']['tmp_name']);	
+						$imagenoriginal = imagecreatefromgif($_FILES['userfile']['tmp_name']);
 					}else if($tipo=="png"){
 						$imagenoriginal = imagecreatefrompng($_FILES['userfile']['tmp_name']);
 					}else{
@@ -95,23 +95,23 @@ if(!isset($_SESSION[id_user])){
 					}
 					if($ancho >= $anchomax){
 						$nuevoalto = round($anchomax / $ancho * $alto);
-						$imagennueva = imagecreatetruecolor($anchomax,$nuevoalto); 
+						$imagennueva = imagecreatetruecolor($anchomax,$nuevoalto);
 						imagecopyresampled($imagennueva, $imagenoriginal, 0, 0, 0, 0, $anchomax, $nuevoalto, $ancho, $alto);
-						imagejpeg($imagennueva, $path.'pc_'.$cad.'.jpg'); 
+						imagejpeg($imagennueva, $path.'pc_'.$cad.'.jpg');
 					}else{
-						$imagennueva = imagecreatetruecolor($ancho,$alto); 
+						$imagennueva = imagecreatetruecolor($ancho,$alto);
 						$background = imagecolorallocate($imagennueva, 255, 255, 255);
 						imagefill ($imagennueva, 0, 0, $background);
 						imagecopyresampled($imagennueva, $imagenoriginal, 0, 0, 0, 0, $ancho, $alto, $ancho, $alto);
-						imagejpeg($imagennueva, $path.'pc_'.$cad.'.jpg'); 	
+						imagejpeg($imagennueva, $path.'pc_'.$cad.'.jpg');
 					}//-------
 					$tam=getimagesize($_FILES['userfile']['tmp_name']);
 					$ancho = $tam[0];
 					$alto =  $tam[1];
-					$anchomax = 76;		
-					
+					$anchomax = 76;
+
 					if($tipo=="gif"){
-						$imagenoriginal = imagecreatefromgif($_FILES['userfile']['tmp_name']);	
+						$imagenoriginal = imagecreatefromgif($_FILES['userfile']['tmp_name']);
 					}else if($tipo=="png"){
 						$imagenoriginal = imagecreatefrompng($_FILES['userfile']['tmp_name']);
 					}else{
@@ -119,17 +119,17 @@ if(!isset($_SESSION[id_user])){
 					}
 					if($ancho >= $anchomax){
 						$nuevoalto = round($anchomax / $ancho * $alto);
-						$imagennueva = imagecreatetruecolor($anchomax,$nuevoalto); 
+						$imagennueva = imagecreatetruecolor($anchomax,$nuevoalto);
 						imagecopyresampled($imagennueva, $imagenoriginal, 0, 0, 0, 0, $anchomax, $nuevoalto, $ancho, $alto);
-						imagejpeg($imagennueva, $path.'movil_'.$cad.'.jpg'); 
+						imagejpeg($imagennueva, $path.'movil_'.$cad.'.jpg');
 					}else{
-						$imagennueva = imagecreatetruecolor($ancho,$alto); 
+						$imagennueva = imagecreatetruecolor($ancho,$alto);
 						$background = imagecolorallocate($imagennueva, 255, 255, 255);
 						imagefill ($imagennueva, 0, 0, $background);
 						imagecopyresampled($imagennueva, $imagenoriginal, 0, 0, 0, 0, $ancho, $alto, $ancho, $alto);
-						imagejpeg($imagennueva, $path.'movil_'.$cad.'.jpg'); 	
+						imagejpeg($imagennueva, $path.'movil_'.$cad.'.jpg');
 					}
-					
+
 					//bd
 					$SQLinserta="INSERT INTO ofertas (img, descr, fecha, id_u, activo, nombre) VALUES ('$cad.jpg','$desc','$fecha','$_SESSION[id_user]','$activo','$nombreo')";
 					//echo $SQLinserta;
@@ -140,8 +140,8 @@ if(!isset($_SESSION[id_user])){
 					}else{
 						?>
                     <script>alert('<?=$error?>'); history.back();</script>
-                    <? 
-					}//subida	
+                    <?
+					}//subida
 			 }
 			?>
             <form action="" method="post" enctype="multipart/form-data" name="frmofer" id="frmofer">
@@ -226,7 +226,7 @@ if(!isset($_SESSION[id_user])){
 		}
 		mysql_free_result($sql);
 		?>
-        
+
       </div>
       <div class="limpia_o"></div>
       <div style="height:1px; background:#FFF; margin:25px 4px 0;"></div>

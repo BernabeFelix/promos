@@ -165,8 +165,8 @@ while ($row = $mysqli -> query($sql) -> fetch_array()) {
 </body>
 </html>
 <? include('php/analytics.php');?>
-<?php if ($_GET[token] != "") {
-    $sql = mysql_query("select * from usuarios where md5='" . $_GET[token] . "'");
+<?php if (isset($_GET['token']) && $_GET['token'] != "") {
+    $sql = mysql_query("select * from usuarios where md5='" . $_GET['token'] . "'");
     if ($row = mysql_fetch_array($sql)) {
         ?>
         <script>
@@ -176,7 +176,7 @@ while ($row = $mysqli -> query($sql) -> fetch_array()) {
 			$('#ventana').css("height","200px");
 			$("#ventana").html('<br><center><img src="images/loading.gif"><br><br>Procesando...</center>');
 			$('#ventana').center();
-			$.post('php/paginas.php?pag=lost3', {md5:'<?=$_GET[token]?>'},
+			$.post('php/paginas.php?pag=lost3', {md5:'<?=$_GET['token']?>'},
 			  function(data){
 				  $("#ventana").html('<a href="#" onclick="cerrar_ventana(); return false;"><div id="cerrar_ventana"></div></a><div class="limpiar"></div>'+data);
 		 	});

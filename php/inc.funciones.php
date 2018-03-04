@@ -180,24 +180,24 @@ function sql_fecha($s)
 }
 function limpia_html($s)
 {
-    $s = ereg_replace("á", "&aacute;", $s);
-    $s = ereg_replace("é", "&eacute;", $s);
-    $s = ereg_replace("í", "&iacute;", $s);
-    $s = ereg_replace("ó", "&oacute;", $s);
-    $s = ereg_replace("ú", "&uacute;", $s);
-    $s = ereg_replace("Á", "&Aacute;", $s);
-    $s = ereg_replace("É", "&Eacute;", $s);
-    $s = ereg_replace("Í", "&Iacute;", $s);
-    $s = ereg_replace("Ó", "&Oacute;", $s);
-    $s = ereg_replace("Ú", "&Uacute;", $s);
-    $s = str_replace("ñ", "&ntilde;", $s);
-    $s = str_replace("Ñ", "&Ntilde;", $s);
-//    $s = str_replace(""","&ldquo;",$s);
-    //$s = str_replace("\"","&ldquo;",$s);
-    $s = str_replace("¿", "&iquest;", $s);
-    $s = str_replace("\n", "<br>", $s);
-    //$s = str_replace("\"","&quot;",$s);
-    $s = str_replace("'", "&prime;", $s);
+//     $s = preg_replace("á", "&aacute;", $s);
+//     $s = preg_replace("é", "&eacute;", $s);
+//     $s = preg_replace("í", "&iacute;", $s);
+//     $s = preg_replace("ó", "&oacute;", $s);
+//     $s = preg_replace("ú", "&uacute;", $s);
+//     $s = preg_replace("Á", "&Aacute;", $s);
+//     $s = preg_replace("É", "&Eacute;", $s);
+//     $s = preg_replace("Í", "&Iacute;", $s);
+//     $s = preg_replace("Ó", "&Oacute;", $s);
+//     $s = preg_replace("Ú", "&Uacute;", $s);
+//     $s = str_replace("ñ", "&ntilde;", $s);
+//     $s = str_replace("Ñ", "&Ntilde;", $s);
+// //    $s = str_replace(""","&ldquo;",$s);
+//     //$s = str_replace("\"","&ldquo;",$s);
+//     $s = str_replace("¿", "&iquest;", $s);
+//     $s = str_replace("\n", "<br>", $s);
+//     //$s = str_replace("\"","&quot;",$s);
+//     $s = str_replace("'", "&prime;", $s);
 //    $s = str_replace("<amper>","&amp;",$s);
     return $s;
 }

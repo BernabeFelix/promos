@@ -1,4 +1,4 @@
-<?
+<?php
 include('php/inc.config.php');
 include('php/inc.funciones.php');
 $user=limpia_html(trim($_POST[user]));
@@ -10,7 +10,7 @@ $pass=md5($pass);
 if($user!="administrador"){echo "Error: los datos son incorrectos."; exit;}
 if($pass!=md5('HJR-657XT')){echo "Error: los datos son incorrectos."; exit;}
 //$sql=mysql_query("select * from admin where usuario='".$user."'");
-$_SESSION[id_admin]="1";
+$_SESSION['id_admin']="1";
 		session_start();
 		echo"Datos Correctos";
 
